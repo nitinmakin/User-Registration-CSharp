@@ -10,10 +10,17 @@ namespace NUnitTestUserRegistration
         {
         }
         [Test]
-        public void GivenCorrectName_ShouldPassTest()
+        public void GivenCorrectFirstName_ShouldPassTest()
         {
             UserValidationMain userValidation = new UserValidationMain();
-           bool result = userValidation.ValidateGivenInput("Nitin");
+            bool result = userValidation.ValidateFirstName("Nitin");
+            Assert.IsTrue(result);
+        }
+        [Test]
+        public void GivenCorrectLastName_ShouldPassTest()
+        {
+            UserValidationMain userValidation = new UserValidationMain();
+            bool result = userValidation.ValidateLastName("Makin");
             Assert.IsTrue(result);
         }
     }
