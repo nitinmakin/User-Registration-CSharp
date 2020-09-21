@@ -48,8 +48,21 @@
         /// <returns></returns>
         public bool ValidatePhoneNo(string validate)
         {
-            string phoneNo = "^([0]|\\+91)?[6789]\\d{9}$"; 
-            return Regex.IsMatch(validate, phoneNo );
+            string phoneNo = "^([0]|\\+91)?[6789]\\d{9}$";
+            return Regex.IsMatch(validate, phoneNo);
+        }
+
+
+        /// <summary>
+        /// Method to validate password 
+        /// </summary>
+        /// <param name="validation"></param>
+        /// <returns></returns>
+        public bool ValidatePassword(string validate)
+        {
+            string password = "([a-z]{8,25}$)";
+            return Regex.IsMatch(validate, password);
+
         }
     }
 }
