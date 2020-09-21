@@ -82,7 +82,19 @@
         /// <returns></returns>    
         public bool ValidatePasswordRule3(string validate)
         {
-            string password = "(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(.{8,15})$";
+            string password = "^(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(.{8,15})$";
+            return Regex.IsMatch(validate, password);
+        }
+
+        /// <summary>
+        /// Method to validate password rule 4
+        /// </summary>
+        /// <param name="validation"></param>
+        /// <returns></returns>    
+        public bool ValidatePasswordRule4(string validate)
+        {
+            string password = "(?=.*[0-9])(?=.*[@]{1})(?=.*[A-Z])(?=.*[a-z])(.{8,15})$";
+
             return Regex.IsMatch(validate, password);
         }
     }

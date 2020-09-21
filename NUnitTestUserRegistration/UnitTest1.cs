@@ -61,5 +61,13 @@ namespace NUnitTestUserRegistration
             bool result = userValidation.ValidatePasswordRule3("NitinMakin124");
             Assert.IsTrue(result);
         }
+
+        [Test]
+        public void GivenCorrectPAsswordRule4MustHaveOnly1SpecialChar_ShouldPassTest()
+        {
+            UserValidationMain userValidation = new UserValidationMain();
+            bool result = userValidation.ValidatePasswordRule4("NitinMakin124@");
+            Assert.IsTrue(result);
+        }
     }
 }
