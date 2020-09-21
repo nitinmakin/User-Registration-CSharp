@@ -47,10 +47,18 @@ namespace NUnitTestUserRegistration
             bool result = userValidation.ValidatePasswordRule1("nitinmakin");
             Assert.IsTrue(result);
         }
+        [Test]
         public void GivenCorrectPAsswordRule2Alteast1Uppercase_ShouldPassTest()
         {
             UserValidationMain userValidation = new UserValidationMain();
             bool result = userValidation.ValidatePasswordRule2("NitinMakin");
+            Assert.IsTrue(result);
+        }
+        [Test]
+        public void GivenCorrectPAsswordRule3Alteast1NumaricNumber_ShouldPassTest()
+        {
+            UserValidationMain userValidation = new UserValidationMain();
+            bool result = userValidation.ValidatePasswordRule3("NitinMakin124");
             Assert.IsTrue(result);
         }
     }
