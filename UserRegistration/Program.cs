@@ -6,7 +6,7 @@ namespace UserRegistration
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello.. Welcome to User Validation Problem");
+            Console.WriteLine("Hello.. Welcome to User Validation Problem");          
         }
     }
 }
