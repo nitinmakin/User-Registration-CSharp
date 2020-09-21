@@ -1,8 +1,11 @@
-using NUnit.Framework;
-using UserRegistration;
-
 namespace NUnitTestUserRegistration
 {
+    using NUnit.Framework;
+    using UserRegistration;
+
+    /// <summary>
+    /// test class
+    /// </summary>
     public class Tests
     {
         [SetUp]
@@ -21,6 +24,13 @@ namespace NUnitTestUserRegistration
         {
             UserValidationMain userValidation = new UserValidationMain();
             bool result = userValidation.ValidateLastName("Makin");
+            Assert.IsTrue(result);
+        }
+        [Test]
+        public void GivenCorrectEmail_ShouldPassTest()
+        {
+            UserValidationMain userValidation = new UserValidationMain();
+            bool result = userValidation.ValidateEmail("nitinmakin124@gmail.com");
             Assert.IsTrue(result);
         }
     }

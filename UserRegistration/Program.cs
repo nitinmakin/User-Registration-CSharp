@@ -1,10 +1,17 @@
-﻿using System;
-
-namespace UserRegistration
+﻿namespace UserRegistration
 {
-    class Program
+    using System;
+
+    /// <summary>
+    /// program class
+    /// </summary>
+  public  class Program
     {
-        static void Main(string[] args)
+        /// <summary>
+        /// main method
+        /// </summary>
+        /// <param name="validation"></param>
+        public static void Main(string[] args)
         {
             Console.WriteLine("Hello.. Welcome to User Validation Problem");          
         }
