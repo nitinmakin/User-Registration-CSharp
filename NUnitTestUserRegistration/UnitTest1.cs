@@ -33,5 +33,12 @@ namespace NUnitTestUserRegistration
             bool result = userValidation.ValidateEmail("nitinmakin124@gmail.com");
             Assert.IsTrue(result);
         }
+        [Test]
+        public void GivenCorrectPhoneNo_ShouldPassTest()
+        {
+            UserValidationMain userValidation = new UserValidationMain();
+            bool result = userValidation.ValidatePhoneNo("07829376277");
+            Assert.IsTrue(result);
+        }
     }
 }
