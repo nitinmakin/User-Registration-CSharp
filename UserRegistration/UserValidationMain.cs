@@ -54,15 +54,25 @@
 
 
         /// <summary>
-        /// Method to validate password 
+        /// Method to validate password rule 1
         /// </summary>
         /// <param name="validation"></param>
-        /// <returns></returns>
-        public bool ValidatePassword(string validate)
+        /// <returns></returns>    
+        public bool ValidatePasswordRule1(string validate)
         {
             string password = "([a-z]{8,25}$)";
             return Regex.IsMatch(validate, password);
+        }
 
+        /// <summary>
+        /// Method to validate password rule 2
+        /// </summary>
+        /// <param name="validation"></param>
+        /// <returns></returns>    
+        public bool ValidatePasswordRule2(string validate)
+        {
+            string password = "^(?=.*[A-Z])(?=.*[a-z])(.{8,15})$ ";
+            return Regex.IsMatch(validate, password);
         }
     }
 }

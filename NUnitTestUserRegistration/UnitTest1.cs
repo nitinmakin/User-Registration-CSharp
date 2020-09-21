@@ -44,7 +44,13 @@ namespace NUnitTestUserRegistration
         public void GivenCorrectPAsswordRule1Min8Char_ShouldPassTest()
         {
             UserValidationMain userValidation = new UserValidationMain();
-            bool result = userValidation.ValidatePassword("nitinmakin");
+            bool result = userValidation.ValidatePasswordRule1("nitinmakin");
+            Assert.IsTrue(result);
+        }
+        public void GivenCorrectPAsswordRule2Alteast1Uppercase_ShouldPassTest()
+        {
+            UserValidationMain userValidation = new UserValidationMain();
+            bool result = userValidation.ValidatePasswordRule2("NitinMakin");
             Assert.IsTrue(result);
         }
     }
