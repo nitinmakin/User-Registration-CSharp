@@ -66,8 +66,25 @@ namespace NUnitTestUserRegistration
         public void GivenCorrectPAsswordRule4MustHaveOnly1SpecialChar_ShouldPassTest()
         {
             UserValidationMain userValidation = new UserValidationMain();
-            bool result = userValidation.ValidatePasswordRule4("NitinMakin124@");
-            Assert.IsTrue(result);
+            Assert.IsTrue(userValidation.ValidatePasswordRule4("NitinMakin124@"));
+        }
+        [Test]
+        public void TestCaseForValidatingAllTheEmails()
+        {
+            UserValidationMain userValidation = new UserValidationMain();
+            Assert.IsTrue(userValidation.ValidateEmail("nitinmakin124@gmail.com"));
+            Assert.IsTrue(userValidation.ValidateEmail("abc.ced@gmail.com"));
+            Assert.IsTrue(userValidation.ValidateEmail("abc@gmail.com"));
+            Assert.IsTrue(userValidation.ValidateEmail("abc@gmail.in"));
+            Assert.IsTrue(userValidation.ValidateEmail("abc.cedfac@gmail.com"));
+            Assert.IsTrue(userValidation.ValidateEmail("n12345667@gmail.com"));
+            Assert.IsTrue(userValidation.ValidateEmail("abc+ced@gmail.com"));
+            Assert.IsTrue(userValidation.ValidateEmail("abc-ced@gmail.com"));
+            Assert.IsTrue(userValidation.ValidateEmail("abc_ced@gmail.com"));
+            Assert.IsTrue(userValidation.ValidateEmail("abcced@gmail.com"));
+            Assert.IsTrue(userValidation.ValidateEmail("a12dd77@gmail.in"));
+
         }
     }
+
 }
